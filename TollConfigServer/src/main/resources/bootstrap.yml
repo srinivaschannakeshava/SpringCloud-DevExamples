@@ -1,0 +1,3 @@
+encrypt:
+  key: srini91
+spring:  cloud:    config:      server:        encrypt:          enabled: false

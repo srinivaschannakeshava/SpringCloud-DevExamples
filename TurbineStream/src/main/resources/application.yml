@@ -1,0 +1,15 @@
+server:
+  port: 8001
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  application:
+    name: TurbineStream
+eureka:
+ client:
+  register-with-eureka: true
+  service-url:
+    defaultZone: http://localhost:9999/eureka

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: TollProcessingTask
+  datasource:
+    url: jdbc:mysql://localhost:3306/tasktracker
+    username: tracker
+    password: tracker
+logging:
+  level:
+   root: debug
+   org.springframework.cloud.task: debug 

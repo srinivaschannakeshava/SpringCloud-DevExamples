@@ -1,0 +1,15 @@
+server:
+  port: 8000
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest  application:    name: HystrixAndTurbineApp
+eureka:  client:    register-with-eureka: false
+    service-url:      defaultZone: http://localhost:9999/eureka
+turbine:  app-config: fastpass-console,tollrate-billboard,gateway-service
+  aggregator:    cluster-config:     - FASTPASS-CONSOLE
+     - TOLLRATE-BILLBOARD
+     - GATEWAY-SERVICE 
+

@@ -1,0 +1,17 @@
+debug: true
+server:
+  port: 9001
+spring:
+  application:
+    name: secure-ui
+security:
+  oauth2:
+    client:
+      client-id: efa91f88fd5fe446e60c
+      client-secret: 7929834cb3c195f97918d34e4113f5d661a3f846
+      access-token-uri: https://github.com/login/oauth/access_token
+      user-authorization-uri: https://github.com/login/oauth/authorize
+      client-authentication-scheme: form
+    resource:
+      user-info-uri: https://api.github.com/user
+      prefer-token-info: false  

@@ -1,0 +1,13 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: Eureka-Server  
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:9999/eureka
+  datacenter: seattle
+  environment: production     

@@ -1,0 +1,49 @@
+server:
+  port: 8888
+logging:
+  level:
+    root: debug
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest 
+  application:
+    name: gateway-service
+  jmx:
+    enabled: false
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:9999/eureka
+  instance:
+    hostname: localhost
+    instance-id: gateway-service
+zuul:
+  routes:
+    f:
+     path: /f/**
+     service-id: fastpass-console
+     strip-prefix: true
+#     url: forward:/customerdetails
+    b: 
+     path: /b/**
+     service-id: tollrate-billboard
+#     url: forward:/dashboard 
+
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 2000  
+
+management:
+  endpoints:
+   web:
+      exposure:
+        include:
+        - hystrix.stream
+
+#ribbon:
+#  http:
+#    client:
+#      enabled: false
