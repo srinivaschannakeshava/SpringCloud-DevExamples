@@ -52,3 +52,6 @@
    - Processors in spring cloud stream
       - read data and publish back on success
    > Note: some key concepts  - consumergroup  - statefull & partition of data
+- Spring Building dataline processors
+   - Spring Cloud Data Flow - toolkit for building data pipelines
+      

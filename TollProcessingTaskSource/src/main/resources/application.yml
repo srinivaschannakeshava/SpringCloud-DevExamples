@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: task-source
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: tasktopic
+server:
+  port: 9001
