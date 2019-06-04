@@ -1,4 +1,4 @@
-logging:  level:    root: debug
+logging:  level:    root: info
 server:
   port: 0
 eureka:
@@ -9,5 +9,6 @@ management:  endpoints:    web:      exposure:        include:        - hys
 spring:  rabbitmq:    host: localhost
     port: 5672
     username: guest
-    password: guest      
+    password: guest    cloud:    stream:      bindings:        standardpasstoll:          destination: passTollExchange          content-type: application/json
+        fastpasstoll:          destination: passTollExchange          content-type: application/json
       
