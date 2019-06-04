@@ -2,13 +2,13 @@ server:
   port: 8888
 logging:
   level:
-    root: debug
+    root: info
 spring:
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest 
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest 
   application:
     name: gateway-service
   jmx:
@@ -23,6 +23,7 @@ eureka:
     hostname: localhost
     instance-id: gateway-service
 zuul:
+  ignored-services: '*'
   routes:
     f:
      path: /f/**

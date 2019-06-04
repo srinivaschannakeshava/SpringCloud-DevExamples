@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: TollIntake
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: passTollExchange
+          group: tollpassgroup
+            
+  
